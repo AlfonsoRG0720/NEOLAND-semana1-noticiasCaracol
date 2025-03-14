@@ -134,6 +134,11 @@ a:hover{
     
 }
 
+.btn1Suscrip:hover{
+    background-color: var(--color-azul);
+    cursor: pointer;
+}
+
 /* Contenido del modal */
 .modal-content {
     background-color: white;
@@ -344,16 +349,10 @@ a:hover{
     margin-bottom: 5px;
     width: 100%;
     display: flex;
-
+    
     a{
         font-size: var(--letra-s);
     }
-
-    img{
-        height: 80px;
-        width: 130px;
-    }
-
 
 }
 
