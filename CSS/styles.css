@@ -160,8 +160,9 @@ a:hover{
     cursor: pointer;
 }
 
-
-
+.animate__animated.animate__bounceInLeft {
+  --animate-duration: 1s;
+}
 
 
 
@@ -201,6 +202,8 @@ a:hover{
 .d-none{
     display: none;
 }
+
+
 
 
 /*=================navegador================*/
@@ -569,6 +572,7 @@ form {
 
 .perfil{
     display: flex;
+    justify-content: space-between;
     width: 100%;
     border: 1px solid black;
     border-radius: 7px 7px 0 0;
