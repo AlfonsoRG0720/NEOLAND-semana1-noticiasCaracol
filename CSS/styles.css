@@ -4,6 +4,7 @@
     --color-azul: rgb(5, 5, 156);
     --color-blanco: white;
     --color-fondo-azul: rgba(23, 118, 202, 0.692);
+    --color-gris: #646464;
 
     /*to do: crear variables con el color del fondo de los comentarios, 
     separadores y fondos de formularios, botones */
@@ -39,6 +40,22 @@ a:hover{
 
 .letraAzul{
     color: var(--color-azul);
+}
+
+.letraGris{
+    color: var(--color-gris);
+}
+
+.letraPeque{
+    font-size: var(--letra-xs);
+}
+
+.letraMediana{
+    font-size: var(--letra-s);
+}
+
+.letraMedioGruesa{
+    font-weight: 600;
 }
 
 
@@ -368,45 +385,92 @@ a:hover{
 
 /*=================noticiaHoy================*/
 
+.noticiaHoyPpal{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
 .noticiaHoy{
-    width: 93%;
+    width: 70%;
     margin: auto;
 
     h2{
         font-size: var(--letra-xl);
-        margin: 20px 0 10px 0;
+        margin: 20px;
         font-weight: 700;
     }
 
     h3{
         font-size: var(--letra-m);
-        margin: 10px auto;
+        margin: 20px;
     }
 
     img{
-        margin: 15px auto;
+        margin: 50px auto 0 auto;
+        width: 80%;
     }
-
-    
-}
-
-.noticiaHoy>div{
-    display: flex;
-    flex-direction: column;
-}
-
-.enunciado{
-    width: 100%;
-}
-
-.cuerpo{
-    width: 100%;
 
     p{
-        margin: 15px;
+        margin: 20px;
         text-align: justify;
     }
+
+    figcaption{
+        font-size: var(--letra-xs);
+        font-weight: 600;
+        color: var(--color-gris);
+        text-align: center;
+    }
 }
+
+.pieNoticia{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+    div{
+        margin: 40px 0;
+        
+        ul{
+            margin-top: 0;
+        }
+    }
+
+    p{
+        margin: 0;
+        padding: 4px 0;
+    }
+
+    a:hover{
+        text-decoration: underline;
+        color: var(--color-azul);
+    }
+}
+
+.rrss{
+    display: flex;
+}
+
+.desarrolloNoticiaHoy{
+    width: 80%;
+    margin: auto;
+
+    p{
+        margin: 0;
+        font-family:Helvetica, sans-serif;
+        padding: 4px 0;
+        line-height: 1.4em;
+    }
+}
+
+.publi2{
+    width: 14%;
+    margin: auto 0;
+    background-color: #004380;
+}
+
 
 
 /*================ blog================*/
