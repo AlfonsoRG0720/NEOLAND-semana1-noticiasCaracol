@@ -26,7 +26,7 @@ body{
 }
 
 a:hover{
-    color: gray;
+    color: rgb(153, 151, 151);
     cursor: pointer;
 }
 
@@ -283,7 +283,7 @@ a:hover{
     background-color: rgb(112, 112, 112);
     display: flex;
     align-items: center;
-    display: none;
+    margin-bottom: 10px;
 
     p{
         padding-left: 50px;
@@ -336,17 +336,25 @@ a:hover{
         left: 20px;
         font-size: var(--letra-l);
         font-weight: 600;
+    }
 
-
-}
+    p:hover{
+        color: var(--color-blanco);
+        cursor: pointer;
+    }
 }
 
 .noticiaPeque{
     display: flex;
     padding-bottom: 10px;
     
+    div{
+        width: 50%;
+    }
+
     img{
         padding-bottom: 10px;
+        
     }
 
     h3{
@@ -385,30 +393,31 @@ a:hover{
 
 /*=================noticiaHoy================*/
 
+
+
 .noticiaHoyPpal{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-bottom: 50px;
 }
 
 .noticiaHoy{
-    width: 70%;
-    margin: auto;
+    width: 90%;
+    margin: 20px auto;
 
     h2{
         font-size: var(--letra-xl);
-        margin: 20px;
         font-weight: 700;
     }
 
     h3{
-        font-size: var(--letra-m);
-        margin: 20px;
+        font-size: var(--letra-s);
+        margin-top: 10px;
     }
 
     img{
-        margin: 50px auto 0 auto;
-        width: 80%;
+        margin: 1em auto 0 auto;
+        width: 90%;
     }
 
     p{
@@ -425,7 +434,7 @@ a:hover{
 }
 
 .pieNoticia{
-    width: 80%;
+    width: 90%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -441,6 +450,7 @@ a:hover{
     p{
         margin: 0;
         padding: 4px 0;
+        font-size: var(--letra-xs);
     }
 
     a:hover{
@@ -451,26 +461,55 @@ a:hover{
 
 .rrss{
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    ul{
+        display: flex;
+        flex-direction: row; 
+        text-align: center;
+        justify-content:center;
+    }
 }
 
 .desarrolloNoticiaHoy{
-    width: 80%;
+    width: 90%;
     margin: auto;
 
     p{
         margin: 0;
         font-family:Helvetica, sans-serif;
-        padding: 4px 0;
+        padding: 10px 0;
         line-height: 1.4em;
+    }
+
+    a{
+        text-decoration: underline;
+        color: var(--color-azul);
+    }
+
+    a:hover{
+        text-decoration: none;
     }
 }
 
 .publi2{
-    width: 14%;
     margin: auto 0;
-    background-color: #004380;
 }
 
+.publiHori{
+    display: block;
+}
+
+.publiVert{
+    display: none;
+
+}
+
+.publiVer2{
+    display:none;
+}
 
 
 /*================ blog================*/
@@ -542,7 +581,7 @@ a:hover{
     border:1px solid black;
     border-radius: 0 0 7px 7px;
     background-color: #eaebec;
-    text-align: justify;
+    text-align:start;
 }
 
 
@@ -666,9 +705,11 @@ form {
 
 .perfil>div{
     margin-left: 5px;
+    padding-right: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: end;
 }
 
 
@@ -692,7 +733,7 @@ form {
 @media (min-width: 480px){
 
     .tendencias{
-        font-size: var(--letra-s);
+        font-size: var(--letra-xs);
     }
 }
 
@@ -713,10 +754,6 @@ form {
 
     .tendencias{
         font-size: var(--letra-s);
-    }
-
-    .separador{
-        display: flex;
     }
 
     .noticias{
@@ -747,9 +784,80 @@ form {
         grid-template-columns: 1fr 1fr;
     }
 
-    .formulario{
-        width: 60%;
-        
+    .noticiaHoyPpal{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 50px;
+    }
+    
+    .noticiaHoy{
+        width: 80%;
+        margin: auto;
+    
+        h2{
+            font-size: var(--letra-xl);
+            margin: 20px;
+            font-weight: 700;
+        }
+    
+        h3{
+            font-size: var(--letra-m);
+            margin: 20px;
+        }
+    
+        img{
+            margin: 50px auto 0 auto;
+            width: 80%;
+        }
+    
+        p{
+            margin: 20px;
+            text-align: justify;
+        }
+    
+        figcaption{
+            font-size: var(--letra-xs);
+            font-weight: 600;
+            color: var(--color-gris);
+            text-align: center;
+        }
+    }
+
+    .desarrolloNoticiaHoy{
+        width: 80%;
+        margin: auto;
+    
+        p{
+            margin: 0;
+            font-family:Helvetica, sans-serif;
+            padding: 10px 0;
+            line-height: 1.4em;
+        }
+    
+        a{
+            text-decoration: underline;
+            color: var(--color-azul);
+        }
+    
+        a:hover{
+            text-decoration: none;
+        }
+    }
+    
+    .publi2{
+        width: 20%;
+    }
+
+    .publiHori{
+        display: none;
+    }
+    
+    .publiVert{
+        display: block;
+    }
+
+    .publiVer2{
+        display: none;
     }
 
     .mundo{
@@ -776,6 +884,10 @@ form {
     .noticias{
         
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .publiVer2{
+        display: block;
     }
 
     .mundo{
